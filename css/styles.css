@@ -7,8 +7,8 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-   background-color: #7E89CA;
-    
+    background-color: #7E89CA;
+
 }
 header{ 
     text-align: center;
@@ -64,5 +64,12 @@ header{
     font-size: 60px;
     color: white;   
    
+}
+
+.btnCont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
 }
 

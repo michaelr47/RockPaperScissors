@@ -71,5 +71,22 @@ header{
     justify-content: space-around;
     align-items: center;
     margin-top: 100px;
+    
 }
 
+.btn {
+   border: none;
+   background-color:  #7E89CA;
+   
+}   
+/* .btn:hover {
+    border-color: white; 
+    box-shadow: 0 0 5px 2px red;
+    
+} */
+
+.pic:hover {
+    border-color: white; 
+    box-shadow: 0 0 5px 2px red;
+    
+}

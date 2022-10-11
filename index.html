@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Rock Paper Scissors</h1>
+      <h1>Rock Paper Scissors</h1>
     </header>
     <div class="container">
-        <div class="containerScore">
-            <div class="userCont">
-                <h1>USER</h1>
-            </div>
-
-            <span id="userScoreSpan">0</span>
-            <span id="colon">:</span>
-            <span id="compScoreSpan">0</span>
-            
-            <div class="compCont">
-                <h1>CPU</h1>
-            </div>
+      <div class="containerScore">
+        <div class="userCont">
+          <h1>USER</h1>
         </div>
+
+        <span id="userScoreSpan">0</span>
+        <span id="colon">:</span>
+        <span id="compScoreSpan">0</span>
+
+        <div class="compCont">
+          <h1>CPU</h1>
+        </div>
+      </div>
     </div>
     <div class="container-text">
-        <div>
-          <h2 id="textWinner">Who will win? Click to find out...🗿</h2>
+      <div>
+        <h2 id="textWinner">
+          See if you can beat the A.I.
+          🦾🤖<span class="leftArm">🦾</span>
+        </h2>
+        <div class="choices-container">
+          <sub id="user-choice">User</sub>
+          <sub id="comp-choice">Computer</sub>
         </div>
+      </div>
     </div>
     <div class="btnCont">
-        
-        <button class="btn" onclick="game('rock')">
-            <img src="img/rock2.jpg" width="200" class="pic">
+      <div class="rounded-border">
+        <button class="btn btn-one" onclick="game('rock')">
         </button>
-        <button class="btn" onclick="game('paper')">
-            <img src="img/paper2.png" width="200" class="pic">
+      </div>
+      <div class="rounded-border">
+        <button class="btn btn-two" onclick="game('paper')">
         </button>
-        <button class="btn" onclick="game('scissors')">
-            <img src="img/scissors.png" class="pic" width="230">
+      </div>
+      <div class="rounded-border">
+        <button class="btn btn-three" onclick="game('scissors')">
         </button>
-        
-        
+      </div>
     </div>
-   
+
     <script src="js/rps.js"></script>
-</body>
+  </body>
 </html>

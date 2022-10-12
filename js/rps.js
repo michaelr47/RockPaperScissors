@@ -37,21 +37,18 @@ const game = (userChoice) => {
     let compChoice = getChoice();
     // Every state of the game in if statements
     if (userChoice === 'rock' && compChoice === 'scissors') {
-      console.log('User choice is: ' + userChoice + ", Computers choice is: " + compChoice);
       userScore++;
       userWin();
       updateTextWin(userChoice, compChoice);
       return "User wins! CPU loses...";
     } 
     else if (userChoice === 'paper' && compChoice === 'rock') {
-      console.log('User choice is: ' + userChoice + ", Computers choice is: " + compChoice);
       userScore++;
       userWin();
       updateTextWin(userChoice, compChoice);
       return 'User wins! CPU loses...';
     }
     else if (userChoice === 'scissors' && compChoice === 'paper') {
-      console.log('User choice is: ' + userChoice + ", Computers choice is: " + compChoice);
       userScore++;
       userWin();
       updateTextWin(userChoice, compChoice);
@@ -59,29 +56,25 @@ const game = (userChoice) => {
     } 
    //if statements for when computer wins 
    else if (compChoice === 'rock' && userChoice === 'scissors') {
-      console.log('Computers choice is: ' + compChoice  + ', User choice is: ' + userChoice);
       compScore++;
       compWin();
       updateTextLose(userChoice, compChoice);
       return 'CPU wins! scissors cant beat rock...';
    }
    else if (compChoice === 'paper' && userChoice === 'rock') {
-      console.log('Computers choice is: ' + compChoice + ', User choice is: ' + userChoice);
       compScore++
       compWin();
       updateTextLose(userChoice, compChoice);
       return 'CPU wins! rock cant beat paper...';
    }
     else if (compChoice === 'scissors' && userChoice === 'paper') {
-      console.log('Computers choice is: ' + compChoice + ', User choice is: ' + userChoice);
       compScore++;
       compWin();
       updateTextLose(userChoice, compChoice);
       return 'CPU wins! paper cant beat scissors...';
     }
     //else statement when cpu and user draw
-    else { 
-      console.log(userChoice + ' === ' + compChoice);
+    else {
       updateIfDraw(userChoice, compChoice);
       return 'its a DRAW!'; 
       

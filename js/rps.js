@@ -6,10 +6,12 @@ let compScoreSpan = document.getElementById('compScoreSpan');
 let userChoiceSpan = document.getElementById('user-choice');
 let compChoiceSpan = document.getElementById('comp-choice');
 let result = document.getElementById('textWinner');
+// default string when game starts.. *used when toggling reset button
+let initialString = document.getElementById('textWinner').innerHTML;
 let btn = document.getElementsByClassName('btn');
-// 3 choices for comp. to loop through
+// 3 choices for comp. to randomize through
 let choices = ['rock', 'paper', 'scissors'];
- 
+ //initialize score to 0 
 let userScore = 0;
 let compScore = 0;
 // Random index choosing 1 out of the 3 for computer                
@@ -23,7 +25,7 @@ const updateTextWin = (c1, c2) => {
 }
 //updates text when comp wins 
 const updateTextLose = (c1, c2) => {
-  result.innerText = c2 + ' beats ' + c1;
+  result.innerText = c1 + ' loses to ' + c2;
 }
 //updates text when its a draw -> ===
 const updateIfDraw = (c1, c2) => {
@@ -86,15 +88,27 @@ const game = (userChoice) => {
     }
    
 }
-
+// func for when user wins 
 const userWin = () => {
   userScoreSpan.innerHTML = userScore;
   resultText = 'User wins';
   result.innerHTML = resultText;
 }
-
+//func for when comp wins
 const compWin = () => {
   compScoreSpan.innerHTML = compScore;
   resultText = 'Computer wins';
   result.innerHTML = resultText;
+}
+//func to reset score and text
+const resetScore = () => {
+  userScore = 0;
+  userScoreSpan.innerHTML = userScore;
+  compScore = 0;
+  compScoreSpan.innerHTML = compScore;
+}
+//func to use 'onclick' in html button
+const resetGame = () => {
+  resetScore();
+  result.innerHTML = initialString;
 }

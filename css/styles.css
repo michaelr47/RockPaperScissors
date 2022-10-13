@@ -9,7 +9,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #428dced0;
   background: linear-gradient(0.25turn, #3f87a6, #a46be9, #febe7a);
-
 }
 
 header {
@@ -77,6 +76,8 @@ header {
   justify-content: space-around;
   align-items: center;
   margin-top: 25px;
+  padding: 1rem;
+  overflow: hidden;
 }
 
 .btn {
@@ -111,22 +112,6 @@ header {
   background-color: white;
   background-size: 25px;
   background-position: center center;
-}
-
-.rounded-border {
-  border: 5px double #010101;
-  padding: 30px;
-  border-radius: 50%;
-  margin-bottom: 5px;
-  position: relative;
-  top: 0;
-  transition: 0.2s all ease-in-out;
-}
-.rounded-border:hover {
-  border: 7px double #edff9a; 
-  position: relative;
-  top: -7px;
-  transition: all ease-out 0.2s;
 }
 
 .leftArm {
@@ -164,3 +149,41 @@ header {
   cursor: pointer;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    rotate: rotate(0deg);
+  }
+}
+
+.rounded-border {
+  padding: 30px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  position: relative;
+  top: 0;
+  transition: 0.2s all ease-in-out;
+  z-index: 2;
+}
+
+.rounded-border:hover {
+  position: relative;
+  top: -7px;
+  transition: all ease-out 0.2s;
+}
+
+.rounded-border::before {
+  content: ''; 
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px dashed #010101;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  animation: rotate 30s linear infinite;
+  z-index: -1;
+}
